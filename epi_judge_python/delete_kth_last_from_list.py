@@ -3,8 +3,14 @@ from test_framework import generic_test
 
 # Assumes L has at least k nodes, deletes the k-th last node in L.
 def remove_kth_last(L, k):
-    # TODO - you fill in here.
-    return None
+    i = 1
+    while i <= k:
+        print(i, k)
+        L = L.next
+        if i == k:
+            L.next = L.next.next
+        i += 1
+    return L
 
 
 if __name__ == '__main__':
